@@ -21,6 +21,9 @@
 		4AFD29CC18F91C5D00BA23BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AE18F91C5D00BA23BE /* UIKit.framework */; };
 		4AFD29D418F91C5D00BA23BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD29D218F91C5D00BA23BE /* InfoPlist.strings */; };
 		4AFD29D618F91C5D00BA23BE /* BeaconQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD29D518F91C5D00BA23BE /* BeaconQuizTests.m */; };
+		4AFD29E218F9266B00BA23BE /* change.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD29DF18F9266B00BA23BE /* change.mp3 */; };
+		4AFD29E318F9266B00BA23BE /* enter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD29E018F9266B00BA23BE /* enter.mp3 */; };
+		4AFD29E418F9266B00BA23BE /* exit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD29E118F9266B00BA23BE /* exit.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		4AFD29D118F91C5D00BA23BE /* BeaconQuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconQuizTests-Info.plist"; sourceTree = "<group>"; };
 		4AFD29D318F91C5D00BA23BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4AFD29D518F91C5D00BA23BE /* BeaconQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconQuizTests.m; sourceTree = "<group>"; };
+		4AFD29DF18F9266B00BA23BE /* change.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = change.mp3; sourceTree = "<group>"; };
+		4AFD29E018F9266B00BA23BE /* enter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enter.mp3; sourceTree = "<group>"; };
+		4AFD29E118F9266B00BA23BE /* exit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = exit.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				4AFD29BC18F91C5D00BA23BE /* Main.storyboard */,
 				4AFD29BF18F91C5D00BA23BE /* BQViewController.h */,
 				4AFD29C018F91C5D00BA23BE /* BQViewController.m */,
+				4AFD29E518F9267200BA23BE /* audio */,
 				4AFD29C218F91C5D00BA23BE /* Images.xcassets */,
 				4AFD29B118F91C5D00BA23BE /* Supporting Files */,
 			);
@@ -150,6 +157,16 @@
 				4AFD29D218F91C5D00BA23BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AFD29E518F9267200BA23BE /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				4AFD29DF18F9266B00BA23BE /* change.mp3 */,
+				4AFD29E018F9266B00BA23BE /* enter.mp3 */,
+				4AFD29E118F9266B00BA23BE /* exit.mp3 */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +247,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AFD29C318F91C5D00BA23BE /* Images.xcassets in Resources */,
+				4AFD29E318F9266B00BA23BE /* enter.mp3 in Resources */,
+				4AFD29E418F9266B00BA23BE /* exit.mp3 in Resources */,
 				4AFD29B518F91C5D00BA23BE /* InfoPlist.strings in Resources */,
+				4AFD29E218F9266B00BA23BE /* change.mp3 in Resources */,
 				4AFD29BE18F91C5D00BA23BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +400,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconQuiz/BeaconQuiz-Prefix.pch";
 				INFOPLIST_FILE = "BeaconQuiz/BeaconQuiz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +414,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconQuiz/BeaconQuiz-Prefix.pch";
 				INFOPLIST_FILE = "BeaconQuiz/BeaconQuiz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

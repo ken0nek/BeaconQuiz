@@ -43,4 +43,30 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark CLLocationManagerDelegate methods
+
+// locationManager:didEnterRegion:
+// Tells the delegate that the user entered the specified region.
+
+// Beaconに入ったときに呼ばれる
+- (void)locationManager:(CLLocationManager *)manager
+         didEnterRegion:(CLRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    [self.enter play];
+}
+
+
+// locationManager:didExitRegion:
+// Tells the delegate that the user left the specified region.
+
+// Beaconから出たときに呼ばれる
+- (void)locationManager:(CLLocationManager *)manager
+          didExitRegion:(CLRegion *)region
+{
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    [self.exit play];
+}
+
+
 @end

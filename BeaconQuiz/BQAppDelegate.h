@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BQAppDelegate : UIResponder <UIApplicationDelegate>
+@import CoreLocation;
+@import AVFoundation;
+
+@interface BQAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) NSUUID *proximityUUID;
+@property (strong, nonatomic) CLLocationManager *manager;
+@property (strong, nonatomic) CLBeaconRegion *region;
+
+@property (strong, nonatomic) AVAudioPlayer *enter;
+@property (strong, nonatomic) AVAudioPlayer *exit;
 
 @end

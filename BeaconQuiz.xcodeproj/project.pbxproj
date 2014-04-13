@@ -13,6 +13,10 @@
 		4A87A04818FA46B20053A09F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04218FA46B20053A09F /* base64.m */; };
 		4A87A04918FA46B20053A09F /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04418FA46B20053A09F /* NSData+SRB64Additions.m */; };
 		4A87A04A18FA46B20053A09F /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04718FA46B20053A09F /* SRWebSocket.m */; };
+		4A87A04C18FA50AD0053A09F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A87A04B18FA50AD0053A09F /* Background.png */; };
+		4A87A04E18FA65960053A09F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87A04D18FA65960053A09F /* MediaPlayer.framework */; };
+		4A87A05018FA68270053A09F /* newHintLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A87A04F18FA68270053A09F /* newHintLabel.png */; };
+		4A87A05218FA6DA40053A09F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A87A05118FA6DA40053A09F /* icon.png */; };
 		4AFD29AB18F91C5D00BA23BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AA18F91C5D00BA23BE /* Foundation.framework */; };
 		4AFD29AD18F91C5D00BA23BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AC18F91C5D00BA23BE /* CoreGraphics.framework */; };
 		4AFD29AF18F91C5D00BA23BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AE18F91C5D00BA23BE /* UIKit.framework */; };
@@ -53,6 +57,10 @@
 		4A87A04518FA46B20053A09F /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		4A87A04618FA46B20053A09F /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		4A87A04718FA46B20053A09F /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		4A87A04B18FA50AD0053A09F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		4A87A04D18FA65960053A09F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4A87A04F18FA68270053A09F /* newHintLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newHintLabel.png; sourceTree = "<group>"; };
+		4A87A05118FA6DA40053A09F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4AFD29A718F91C5C00BA23BE /* BeaconQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFD29AA18F91C5D00BA23BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AFD29AC18F91C5D00BA23BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A87A04E18FA65960053A09F /* MediaPlayer.framework in Frameworks */,
 				4A87A03F18FA467D0053A09F /* libicucore.dylib in Frameworks */,
 				4A87A03D18FA466A0053A09F /* Security.framework in Frameworks */,
 				4A87A03B18FA46610053A09F /* CFNetwork.framework in Frameworks */,
@@ -140,6 +149,7 @@
 		4AFD29A918F91C5C00BA23BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A87A04D18FA65960053A09F /* MediaPlayer.framework */,
 				4A87A03E18FA467D0053A09F /* libicucore.dylib */,
 				4A87A03C18FA466A0053A09F /* Security.framework */,
 				4A87A03A18FA46610053A09F /* CFNetwork.framework */,
@@ -160,6 +170,9 @@
 				4AFD29BC18F91C5D00BA23BE /* Main.storyboard */,
 				4AFD29BF18F91C5D00BA23BE /* BQViewController.h */,
 				4AFD29C018F91C5D00BA23BE /* BQViewController.m */,
+				4A87A05118FA6DA40053A09F /* icon.png */,
+				4A87A04F18FA68270053A09F /* newHintLabel.png */,
+				4A87A04B18FA50AD0053A09F /* Background.png */,
 				4AFD29E518F9267200BA23BE /* audio */,
 				4AFD29C218F91C5D00BA23BE /* Images.xcassets */,
 				4AFD29B118F91C5D00BA23BE /* Supporting Files */,
@@ -283,9 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A87A05018FA68270053A09F /* newHintLabel.png in Resources */,
 				4AFD29C318F91C5D00BA23BE /* Images.xcassets in Resources */,
+				4A87A05218FA6DA40053A09F /* icon.png in Resources */,
 				4AFD29E318F9266B00BA23BE /* enter.mp3 in Resources */,
 				4AFD29E418F9266B00BA23BE /* exit.mp3 in Resources */,
+				4A87A04C18FA50AD0053A09F /* Background.png in Resources */,
 				4AFD29B518F91C5D00BA23BE /* InfoPlist.strings in Resources */,
 				4AFD29E218F9266B00BA23BE /* change.mp3 in Resources */,
 				4AFD29BE18F91C5D00BA23BE /* Main.storyboard in Resources */,

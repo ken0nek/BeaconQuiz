@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A87A03B18FA46610053A09F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87A03A18FA46610053A09F /* CFNetwork.framework */; };
+		4A87A03D18FA466A0053A09F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87A03C18FA466A0053A09F /* Security.framework */; };
+		4A87A03F18FA467D0053A09F /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87A03E18FA467D0053A09F /* libicucore.dylib */; };
+		4A87A04818FA46B20053A09F /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04218FA46B20053A09F /* base64.m */; };
+		4A87A04918FA46B20053A09F /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04418FA46B20053A09F /* NSData+SRB64Additions.m */; };
+		4A87A04A18FA46B20053A09F /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87A04718FA46B20053A09F /* SRWebSocket.m */; };
 		4AFD29AB18F91C5D00BA23BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AA18F91C5D00BA23BE /* Foundation.framework */; };
 		4AFD29AD18F91C5D00BA23BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AC18F91C5D00BA23BE /* CoreGraphics.framework */; };
 		4AFD29AF18F91C5D00BA23BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFD29AE18F91C5D00BA23BE /* UIKit.framework */; };
@@ -37,6 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A87A03A18FA46610053A09F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4A87A03C18FA466A0053A09F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A87A03E18FA467D0053A09F /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4A87A04118FA46B20053A09F /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		4A87A04218FA46B20053A09F /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
+		4A87A04318FA46B20053A09F /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		4A87A04418FA46B20053A09F /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		4A87A04518FA46B20053A09F /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		4A87A04618FA46B20053A09F /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		4A87A04718FA46B20053A09F /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		4AFD29A718F91C5C00BA23BE /* BeaconQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFD29AA18F91C5D00BA23BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AFD29AC18F91C5D00BA23BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A87A03F18FA467D0053A09F /* libicucore.dylib in Frameworks */,
+				4A87A03D18FA466A0053A09F /* Security.framework in Frameworks */,
+				4A87A03B18FA46610053A09F /* CFNetwork.framework in Frameworks */,
 				4AFD29AD18F91C5D00BA23BE /* CoreGraphics.framework in Frameworks */,
 				4AFD29AF18F91C5D00BA23BE /* UIKit.framework in Frameworks */,
 				4AFD29AB18F91C5D00BA23BE /* Foundation.framework in Frameworks */,
@@ -85,6 +104,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A87A04018FA46B20053A09F /* f_SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				4A87A04118FA46B20053A09F /* base64.h */,
+				4A87A04218FA46B20053A09F /* base64.m */,
+				4A87A04318FA46B20053A09F /* NSData+SRB64Additions.h */,
+				4A87A04418FA46B20053A09F /* NSData+SRB64Additions.m */,
+				4A87A04518FA46B20053A09F /* SocketRocket-Prefix.pch */,
+				4A87A04618FA46B20053A09F /* SRWebSocket.h */,
+				4A87A04718FA46B20053A09F /* SRWebSocket.m */,
+			);
+			path = f_SocketRocket;
+			sourceTree = "<group>";
+		};
 		4AFD299E18F91C5C00BA23BE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +140,9 @@
 		4AFD29A918F91C5C00BA23BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A87A03E18FA467D0053A09F /* libicucore.dylib */,
+				4A87A03C18FA466A0053A09F /* Security.framework */,
+				4A87A03A18FA46610053A09F /* CFNetwork.framework */,
 				4AFD29AA18F91C5D00BA23BE /* Foundation.framework */,
 				4AFD29AC18F91C5D00BA23BE /* CoreGraphics.framework */,
 				4AFD29AE18F91C5D00BA23BE /* UIKit.framework */,
@@ -118,6 +154,7 @@
 		4AFD29B018F91C5D00BA23BE /* BeaconQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				4A87A04018FA46B20053A09F /* f_SocketRocket */,
 				4AFD29B918F91C5D00BA23BE /* BQAppDelegate.h */,
 				4AFD29BA18F91C5D00BA23BE /* BQAppDelegate.m */,
 				4AFD29BC18F91C5D00BA23BE /* Main.storyboard */,
@@ -270,6 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A87A04A18FA46B20053A09F /* SRWebSocket.m in Sources */,
+				4A87A04918FA46B20053A09F /* NSData+SRB64Additions.m in Sources */,
+				4A87A04818FA46B20053A09F /* base64.m in Sources */,
 				4AFD29C118F91C5D00BA23BE /* BQViewController.m in Sources */,
 				4AFD29B718F91C5D00BA23BE /* main.m in Sources */,
 				4AFD29BB18F91C5D00BA23BE /* BQAppDelegate.m in Sources */,
@@ -479,6 +519,7 @@
 				4AFD29DB18F91C5D00BA23BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AFD29DC18F91C5D00BA23BE /* Build configuration list for PBXNativeTarget "BeaconQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +528,7 @@
 				4AFD29DE18F91C5D00BA23BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

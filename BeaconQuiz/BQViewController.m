@@ -9,6 +9,9 @@
 #import "BQViewController.h"
 
 @interface BQViewController ()
+{
+    int currentQuestion;
+}
 
 @end
 
@@ -18,7 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
     if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
         // CLLocationManagerの生成とデリゲートの設定
         self.manager = [CLLocationManager new];
@@ -42,6 +45,8 @@
         [self.manager startRangingBeaconsInRegion:self.region];
     }
 }
+
+#pragma mark - locationManager
 
 // Beaconに入ったときに呼ばれる
 - (void)locationManager:(CLLocationManager *)manager
@@ -126,6 +131,7 @@
         case CLProximityImmediate:
             proximityString = @"CLProximityImmediate";
             alpha = 1.0;
+            [self quizManagerGetQuestion:minor];
             break;
         case CLProximityNear:
             proximityString = @"CLProximityNear";
@@ -144,7 +150,7 @@
     self.minorLabel.text = [NSString stringWithFormat:@"%@", minor];
     self.proximityLabel.text = proximityString;
     self.accuracyLabel.text = [NSString stringWithFormat:@"%f", locationAccuracy];
-    self.rssiLabel.text = [NSString stringWithFormat:@"%d", rssi];
+    self.rssiLabel.text = [NSString stringWithFormat:@"%d", (int)rssi];
     
     if ([minor isEqualToNumber:@1]) {
         // Beacon A
@@ -158,9 +164,21 @@
         // Beacon C
         self.beaconLabel.text = @"C";
         self.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.412 blue:0.706 alpha:alpha];
+    } else if ([minor isEqualToNumber:@4]) {
+        // Beacon D
+        self.beaconLabel.text = @"D";
+        self.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.984 blue:0.936 alpha:alpha];
+    } else if ([minor isEqualToNumber:@5]) {
+        // Beacon E
+        self.beaconLabel.text = @"E";
+        self.view.backgroundColor = [UIColor colorWithRed:0.40 green:0.82 blue:0.706 alpha:alpha];
+    } else if ([minor isEqualToNumber:@6]) {
+        // Beacon F
+        self.beaconLabel.text = @"F";
+        self.view.backgroundColor = [UIColor colorWithRed:0.604 green:1.0 blue:0.56 alpha:alpha];
     } else {
         self.beaconLabel.text = @"-";
-        self.view.backgroundColor = [UIColor colorWithRed:0.663 green:0.663 blue:0.663 alpha:1.0];
+        self.view.backgroundColor = [UIColor colorWithRed:0.3 green:0.13 blue:0.53 alpha:1.0];
     }
     
     if (minor != nil && self.currentMinor != nil && ![minor isEqualToNumber:self.currentMinor]) {
@@ -210,6 +228,7 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
+#pragma mark - Sound
 
 - (void)playSound:(NSString*)name
 {
@@ -230,6 +249,39 @@
     }
 }
 
+
+#pragma mark - Quiz
+
+- (void)quizManagerGetQuestion:(NSNumber *)minor
+{
+    int minorInt = [minor intValue];
+    switch (minorInt) {
+        case 0:
+            NSLog(@"---------START---------");
+            break;
+        case 1:
+            NSLog(@"Question%d", minorInt);
+            break;
+        case 2:
+            NSLog(@"Question%d", minorInt);
+            break;
+        case 3:
+            NSLog(@"Question%d", minorInt);
+            break;
+        case 4:
+            NSLog(@"Question%d", minorInt);
+            break;
+        case 5:
+            NSLog(@"Question%d", minorInt);
+            break;
+        case 6:
+            NSLog(@"Question%d", minorInt);
+            break;
+        default:
+            NSLog(@"Other");
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

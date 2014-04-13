@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRWebSocket.h"
 @import CoreLocation;
 @import AudioToolbox;
 
